@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "NHaasGroteskTXPro-55Rg";
+    src: local("NHaasGroteskTXPro-55Rg"),
+        url(../fonts/NHaasGroteskTXPro-55Rg.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "NHaasGroteskTXPro-65Md";
+    src: local("NHaasGroteskTXPro-65Md"),
+        url(../fonts/NHaasGroteskTXPro-65Md.ttf) format("truetype");
+}
+
+.menu-btn {
+    display: block;
+    justify-content: center;
+
+    @media screen and (min-width: 1150px) {
+        display: none;
+    }
+
+    .menu-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.menu-btn {
+    position: fixed;
+    cursor: pointer;
+    z-index: 2400;
+    top: 0;
+    right: 0;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 50px;
+    height: 34px;
+    box-sizing: content-box;
+}
+
+
+
+.menu-btn .sub-menu-btn {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.menu-btn .line {
+    position: absolute;
+    background-color: #fff;
+    width: 40px;
+    height: 3px;
+    border-radius: 60px;
+    right: 0;
+    transition-property: opacity, -webkit-transform, transform;
+    transition-duration: 0.4s;
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+    transform: rotate(0deg) translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.menu-open .line {
+    width: 50px;
+    height: 3px;
+}
+
+.menu-btn .line.line-1 {
+    top: 0;
+}
+
+.menu-btn .line.line-2 {
+    top: 8px;
+}
+
+.menu-btn .line.line-3 {
+    top: 16px;
+}
+
+.menu-btn .line.line-4 {
+    top: 24px;
+}
+
+.menu-btn.menu-open .line-1 {
+    -webkit-transform: rotate(360deg) translate3d(0, 0, 0);
+    transform: rotate(360deg) translate3d(0, 0, 0);
+    opacity: 0;
+}
+
+.menu-btn.menu-open .line-2 {
+    -webkit-transform: rotate(310deg) translate3d(0px, 3px, 0);
+    transform: rotate(310deg) translate3d(0px, 3px, 0);
+}
+
+.menu-btn.menu-open .line-3 {
+    -webkit-transform: rotate(410deg) translate3d(-2px, -5px, 0);
+    transform: rotate(410deg) translate3d(-2px, -5px, 0);
+}
+
+.menu-btn.menu-open .line-4 {
+    -webkit-transform: rotate(360deg) translate3d(0, 0, 0);
+    transform: rotate(360deg) translate3d(0, 0, 0);
+    opacity: 0;
+}
